@@ -1,22 +1,22 @@
----
 language: node_js
 node_js:
-  - "6"
-
+- '6'
 sudo: false
 dist: trusty
-
 addons:
   chrome: stable
-
 cache:
   directories:
-    - $HOME/.npm
-
+  - "$HOME/.npm"
 env:
   global:
-    # See https://git.io/vdao3 for details.
-    - JOBS=1
-
+  - JOBS=1
 before_install:
-  - npm config set spin false
+- npm config set spin false
+deploy:
+  provider: heroku
+  api_key:
+    secure: zKpOXlnNG/optrkJodloFFiWiMQhtaGf3/B2yQquejRQwqULC4SHOLUhzAp5RvHSalPe+HqMrc7crYQJFraBv2H6cgE/mBrgvE6bcHJUQnlB8rpMoVKonOKwpX3VNb//8C4R2HvQfDRV8hwf4KugZoWjafbfbX3z9veGVcwHaHhNcvNSLm50SOk5Nie3Tz25Z+CepjM7qdLoRYVAMVOWQRLmIkwTfr0moI5W6Tt1c5pkta/6Ng70JQE9dQ1wEhpkSXuZAY3VBOsMWb/CGBIKoJzI+iQn938r6jCm3kH041o0pzuQGIMYjfIUe8/dIkbcyc+mmAxT28XEWO2p0g18ufOI7fZEBVRFfinS3A6YOVDd9O0EcqYu2rfZR5iLp07pBWNFaEaR1kaQ72SQQ1S6tOgQZwrgqlhn/B/gAQlKwUnTImDRfi09gA7tclSK3wch2Bgtn7ip3ZT/g/oMnX8XB+WFGRZ3JB6ZGAZ2J4m4vAaCwJzhztjiRtD0xEJjb9EIJPCN6FzPyAwwCHgz2SUou8f7ivwR3q+YITTRsy+rbLmPbDsqpECSqsvp7t+qFAzl+VNURHnJYgy+zBU/b8EK0GCJKABcFMtQopZZAzbuRTa+kQZuMAOFSkh3pd+FQZdakIt+gdkUF6mmeNcBNNVy1f76Ld/QpPnhPvvLHLHYKlA=
+  app: safe-forest-69312
+  on:
+    repo: tofferoma/peep-ui
